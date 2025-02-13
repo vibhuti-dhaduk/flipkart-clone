@@ -1,6 +1,7 @@
 :root {
   --color-blue: #2778ec;
   --color-white: #ffffff;
+  --display-flex: flex;
 }
 
 html,
@@ -102,7 +103,7 @@ video {
   width: 100vw;
   margin: auto;
   background-color: var(--color-blue);
-  display: flex;
+  display: var(--display-flex);
   align-items: center;
 }
 
@@ -112,7 +113,7 @@ video {
   margin-left: 450px;
 }
 
-.navbar__second {
+.navbar__second--section {
   display: flex;
   width: 550px;
   height: 35px;
@@ -132,12 +133,11 @@ video {
   width: 100%;
   font-size: 10px;
   border: none;
-  /* background: rgba(237, 232, 232, 0.116); */
   padding-left: 10px;
 }
 
-.navbar__third {
-  display: flex;
+.navbar__third--section {
+  display: var(--display-flex);
   margin: 150px;
 }
 
@@ -162,8 +162,8 @@ video {
 }
 
 .login__svg__logo {
-  margin-top: 8px;
-  margin-left: 2px;
+  margin-top: 10px;
+  margin-left: 3px;
 }
 
 .navbar__cart__icon {
@@ -201,4 +201,54 @@ video {
     /* font-size: 0; */
     width: 30px;
   }
+}
+
+/* -------------------category__bar--------------------- */
+
+.category__bar__container {
+  height: 12vh;
+  width: 100vw;
+  display: var(--display-flex);
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.category__image1 {
+  text-align: center;
+}
+
+.category__bar--images {
+  width: 50px;
+}
+
+.category__bar--text1 {
+  margin-top: 8px;
+  position: relative;
+}
+.category__svg__logo1 {
+  margin-left: 30px;
+  position: absolute;
+  margin-top: -15px;
+}
+.category__svg__logo2 {
+  margin-left: 40px;
+  position: absolute;
+  margin-top: -15px;
+}
+.category__svg__logo3 {
+  margin-left: 25px;
+  position: absolute;
+  margin-top: -15px;
+}
+.category__svg__logo4 {
+  margin-left: 40px;
+  position: absolute;
+  margin-top: -15px;
+}
+
+.category__svg__logo5 {
+  margin-left: 70px;
+  position: absolute;
+  margin-top: -15px;
 }
