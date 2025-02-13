@@ -1,7 +1,10 @@
 :root {
   --color-blue: #2778ec;
   --color-white: #ffffff;
+  /* --color-lightgray: #f1f3f6; */
+  --color-lightgray:rgb(153, 150, 150);
   --display-flex: flex;
+  --position-absolute: absolute;
 }
 
 html,
@@ -212,6 +215,7 @@ video {
   justify-content: center;
   align-items: center;
   gap: 80px;
+  background-color: var(--color-white);
 }
 
 .category__image1 {
@@ -228,27 +232,144 @@ video {
 }
 .category__svg__logo1 {
   margin-left: 30px;
-  position: absolute;
+  position: var(--position-absolute);
   margin-top: -15px;
 }
 .category__svg__logo2 {
   margin-left: 40px;
-  position: absolute;
+  position: var(--position-absolute);
   margin-top: -15px;
 }
 .category__svg__logo3 {
   margin-left: 25px;
-  position: absolute;
+  position: var(--position-absolute);
   margin-top: -15px;
 }
 .category__svg__logo4 {
   margin-left: 40px;
-  position: absolute;
+  position: var(--position-absolute);
   margin-top: -15px;
 }
 
 .category__svg__logo5 {
   margin-left: 70px;
-  position: absolute;
+  position: var(--position-absolute);
   margin-top: -15px;
 }
+
+/* ------------------------dealoftheday--section -------------------------------- */
+
+body {
+  background-color: #f1f3f6;
+}
+
+.deals__section {
+  height: 350px;
+  width: 1390px;
+  /* border: 1px solid black; */
+  /* padding: 10px 5px 5px 30px; */
+  margin-left: 120px;
+  margin-top: 20px;
+  background-color: var(--color-white);
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+/* .deals__time{
+  height: 60px;
+  width: 1390px;
+}  */
+
+.deals__time--text {
+  /* background-color: pink; */
+  font-size: 25px;
+  padding: 10px 0px 10px 10px;
+  display: flex;
+  justify-content: space-center;
+  border-bottom: 1px solid #c2afab;
+  /* position: fixed; */
+}
+
+.deal_time--svg {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.deals__time--text--1 {
+  font-size: 15px;
+  color: var(--color-lightgray);
+  margin-top: 9px;
+  margin-left: 7px;
+}
+
+.deal__btn{
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  margin-left: 970px;
+  border: none;
+  padding: 10px;
+}
+
+.deal__product {
+  height: 280px;
+  width: 200px;
+  /* border: 1px solid black; */
+  display: flex;
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  overflow-y: hidden; 
+  overflow-x: auto; 
+} 
+
+.product__image1 {
+  height: 190px;
+  width: 140px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.product__deal--text {
+  margin-top: 200px;
+  white-space: nowrap;
+  margin-left: -150px;
+}
+
+.product__deal--text--1 {
+  margin-top: 230px;
+  white-space: nowrap;
+  color: green;
+  margin-left: -170px;
+  line-height: 0.4;
+  font-size: 14px;
+}
+
+.product__deal--text--2 {
+  margin-top: 250px;
+  white-space: nowrap;
+  margin-left: -120px;
+  line-height: 0.4;
+  font-size: 14px;
+  color: rgb(153, 150, 150);
+}
+
+.image__section{
+  float: right;
+  height: 350px;
+  width: 220px;
+  border: 1px solid blue;
+  margin-right: 90px;
+  margin-top: -352px;
+}
+
+.books__section{
+  height: 350px;
+  width: 1600px;
+  /* border: 1px solid black; */
+  padding: 10px 5px 5px 30px;
+  margin-left: 120px;
+  margin-top: 20px;
+  background-color: var(--color-white);
+} 
