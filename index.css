@@ -1,7 +1,6 @@
 :root {
   --color-blue: #2778ec;
   --color-white: #ffffff;
-  /* --color-lightgray: #f1f3f6; */
   --color-lightgray: rgb(153, 150, 150);
   --color-lightgray1:rgb(236, 234, 234);
 }
@@ -181,29 +180,69 @@ video {
 }
 
 @media (max-width: 768px) {
-  html {
-    font-size: 14px;
+  .navbar {
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .navbar__first {
-    justify-content: space-between;
-    gap: 0vw;
-    padding: 1.5vh 4vw;
+  .navbar__image {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+  }
+
+  .navbar__second--section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 400px;
+  }
+
+  .navbar__search__input {
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .navbar__search__icon {
+    position: relative;
+    left: -25px;
+    top: 0;
+  }
+
+  .navbar__third--section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .login__btn {
+    font-size: 14px;
+    padding: 4px;
+    width: 80px;
   }
 
   .login__more {
-    display: none;
-  }
-
-  .navbar__second {
-    display: none;
+    font-size: 12px;
+    margin-left: 5px;
   }
 
   .navbar__cart__icon {
-    /* font-size: 0; */
-    width: 30px;
+    margin-left: 10px;
+  }
+
+  .nav__cart__text {
+    font-size: 12px;
   }
 }
+
 
 /* -------------------category__bar--------------------- */
 
@@ -256,6 +295,41 @@ video {
   margin-top: -15px;
 }
 
+@media (max-width: 768px) {
+  .category__bar__container {
+    height: auto; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 10px; 
+    justify-content: space-evenly;
+  }
+
+  .category__image1 {
+    flex: 1 1 30%; 
+    max-width: 100px; 
+  }
+
+  .category__bar--images {
+    width: 40px; 
+  }
+
+  .category__bar--text1 {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .category__svg__logo1,
+  .category__svg__logo2,
+  .category__svg__logo3,
+  .category__svg__logo4,
+  .category__svg__logo5 {
+    margin-left: 10px;
+    position: relative; 
+    display: inline-block; 
+  }
+}
+
+
 /* ------------------------dealoftheday--section -------------------------------- */
 
 body {
@@ -265,8 +339,6 @@ body {
 .deals__section {
   height: 350px;
   width: 1390px;
-  /* border: 1px solid black; */
-  /* padding: 10px 5px 5px 30px; */
   margin-left: 120px;
   margin-top: 20px;
   background-color: var(--color-white);
@@ -281,19 +353,12 @@ body {
   gap: 10px;
 }
 
-/* .deals__time{
-  height: 60px;
-  width: 1390px;
-}  */
-
 .deals__time--text {
-  /* background-color: pink; */
   font-size: 25px;
   padding: 10px 0px 10px 10px;
   display: flex;
   justify-content: space-center;
   border-bottom: 1px solid #c2afab;
-  /* position: fixed; */
 }
 
 .deal_time--svg {
@@ -319,7 +384,6 @@ body {
 .deal__product {
   height: 280px;
   width: 200px;
-  /* border: 1px solid black; */
   display: flex;
   float: left;
   margin-top: 10px;
@@ -482,15 +546,108 @@ body {
   float: right;
   height: 368px;
   width: 220px;
-  /* border: 1px solid blue; */
   margin-right: 90px;
   margin-top: -370px;
 }
 
+@media screen and (max-width: 768px) {
+  .deals__section {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    height: auto;
+    white-space: normal;
+  }
+
+  .deals__time--text {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .deal_time--svg {
+    margin: 0 10px;
+  }
+
+  .deals__time--text--1 {
+    font-size: 14px;
+    color: var(--color-lightgray);
+    margin: 0;
+  }
+
+  .deal__btn {
+    padding: 8px;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deal__product {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .deal__product img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .product__deal--text,
+.product__deal--text--2,
+.product__deal--text--4,
+.product__deal--text--6,
+.product__deal--text--8,
+.product__deal--text--10,
+.product__deal--text--03,
+.product__deal--text--04 {
+    display: none !important;
+}
+
+.product__deal--text--1,
+.product__deal--text--3,
+.product__deal--text--5,
+.product__deal--text--7,
+.product__deal--text--9 {
+    display: flex;
+    color: green !important; 
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+  .scroll__button {
+    display: none; 
+  }
+
+  .image__section {
+    display: none; 
+  }
+}
+
+   /* ------------------------------book__section------------------------------ */
+
 .books__section {
   height: 350px;
   width: 1600px;
-  /* border: 1px solid black; */
   padding: 10px 5px 5px 30px;
   margin-left: 120px;
   margin-top: 20px;
@@ -608,4 +765,71 @@ body {
   font-size: 14px;
   color: rgb(153, 150, 150);
 }
+
+@media screen and (max-width: 768px) {
+  .books__section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .deals__time--text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .deal__btn--1 {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: var(--color-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .deal__product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .deal__product img {
+    width: 80px; 
+    height: auto;
+    object-fit: contain;
+  }
+
+  
+  .product__deal--text--15,  
+  .product__deal--text--18, 
+  .product__deal--text--21,  
+  .product__deal--text--24,  
+  .product__deal--text--17,  
+  .product__deal--text--20,  
+  .product__deal--text--23,  
+  .product__deal--text--26 { 
+    display: none;
+  }
+
+  
+  .product__deal--text--16,
+  .product__deal--text--19,
+  .product__deal--text--22,
+  .product__deal--text--25 {
+    color: green;
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+
 
