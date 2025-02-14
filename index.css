@@ -2,7 +2,7 @@
   --color-blue: #2778ec;
   --color-white: #ffffff;
   /* --color-lightgray: #f1f3f6; */
-  --color-lightgray:rgb(153, 150, 150);
+  --color-lightgray: rgb(153, 150, 150);
   --display-flex: flex;
   --position-absolute: absolute;
 }
@@ -271,9 +271,15 @@ body {
   margin-left: 120px;
   margin-top: 20px;
   background-color: var(--color-white);
-  overflow: auto;
   white-space: nowrap;
   padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.slider {
+  overflow-x: auto;
+  display: flex;
+  gap: 10px;
 }
 
 /* .deals__time{
@@ -303,7 +309,7 @@ body {
   margin-left: 7px;
 }
 
-.deal__btn{
+.deal__btn {
   color: var(--color-white);
   background-color: var(--color-blue);
   margin-left: 970px;
@@ -319,10 +325,7 @@ body {
   float: left;
   margin-top: 10px;
   margin-left: 20px;
-  display: flex;
-  overflow-y: hidden; 
-  overflow-x: auto; 
-} 
+}
 
 .product__image1 {
   height: 190px;
@@ -355,7 +358,80 @@ body {
   color: rgb(153, 150, 150);
 }
 
-.image__section{
+.product__deal--text--3 {
+  margin-top: 230px;
+  white-space: nowrap;
+  color: green;
+  margin-left: -130px;
+  line-height: 0.4;
+  font-size: 14px;
+}
+
+.product__deal--text--4 {
+  margin-top: 250px;
+  white-space: nowrap;
+  margin-left: -100px;
+  line-height: 0.4;
+  font-size: 14px;
+  color: rgb(153, 150, 150);
+}
+
+.product__image03 {
+  height: 150px;
+  width: 140px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.product__deal--text--03 {
+  margin-top: 200px;
+  white-space: nowrap;
+  margin-left: -130px;
+}
+
+.product__deal--text--5 {
+  margin-top: 230px;
+  white-space: nowrap;
+  color: green;
+  margin-left: -100px;
+  line-height: 0.4;
+  font-size: 14px;
+}
+
+.product__deal--text--6 {
+  margin-top: 250px;
+  white-space: nowrap;
+  margin-left: -90px;
+  line-height: 0.4;
+  font-size: 14px;
+  color: rgb(153, 150, 150);
+}
+
+.product__deal--text--04 {
+  margin-top: 200px;
+  white-space: nowrap;
+  margin-left: -120px;
+}
+
+.product__deal--text--7 {
+  margin-top: 230px;
+  white-space: nowrap;
+  color: green;
+  margin-left: -79px;
+  line-height: 0.4;
+  font-size: 14px;
+}
+
+.product__deal--text--8 {
+  margin-top: 250px;
+  white-space: nowrap;
+  margin-left: -80px;
+  line-height: 0.4;
+  font-size: 14px;
+  color: rgb(153, 150, 150);
+}
+
+.image__section {
   float: right;
   height: 350px;
   width: 220px;
@@ -364,7 +440,7 @@ body {
   margin-top: -352px;
 }
 
-.books__section{
+.books__section {
   height: 350px;
   width: 1600px;
   /* border: 1px solid black; */
@@ -372,4 +448,4 @@ body {
   margin-left: 120px;
   margin-top: 20px;
   background-color: var(--color-white);
-} 
+}
